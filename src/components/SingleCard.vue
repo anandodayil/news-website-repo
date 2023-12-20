@@ -5,8 +5,6 @@
             <div class="card-body">
                 <h5 class="card-title"> {{ props.article.title }}</h5>
                 <p class="card-text">{{ props.article.description }}</p>
-                <button>read more...</button>
-                <br>
                 <a :href="props.article.url" class="btn btn-primary">Go somewhere</a>
             </div>
         </div> 
@@ -27,10 +25,5 @@
         margin: 1px 0 20px 0;
         break-inside: avoid;
     }
-    .card-text{
-        -webkit-line-clamp: '1';
-        -webkit-box-orient: 'vertical';
-        overflow: 'hidden';
-        display: '-webkit-box';
-    }
+
 </style>
