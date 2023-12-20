@@ -1,26 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <NavBar @send-news-article="sendNewsArticleHandler"></NavBar>
+    <CardContainer :newsArticle="newsArticle"></CardContainer>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import NavBar from './components/NavBar.vue';
+import CardContainer from './components/CardContainer.vue';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+import { ref } from 'vue'
+
+const newsArticle = ref()
+
+const sendNewsArticleHandler = (newsArticleFC) => {
+  newsArticle.value = newsArticleFC
+} 
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+
 </style>
