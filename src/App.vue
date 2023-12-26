@@ -1,6 +1,8 @@
 <template>
+  <div class="anand">
     <NavBar @send-news-article="sendNewsArticleHandler"></NavBar>
     <CardContainer :newsArticle="newsArticle"></CardContainer>
+  </div>
 </template>
 
 <script setup>
@@ -17,5 +19,7 @@ const sendNewsArticleHandler = (newsArticleFC) => {
 </script>
 
 <style scoped>
-
+  .anand{
+    background-color: lightgray;
+  }
 </style>
